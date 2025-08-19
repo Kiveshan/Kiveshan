@@ -1,71 +1,67 @@
-# 👋 Hi, I'm Kiveshan Naidoo  
+<!-- Banner / Header -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f2027,100:2c5364&height=120&section=header&text=Kiveshan%20Naidoo&fontSize=50&fontColor=ffffff&animation=fadeIn" />
+</p>
 
-💻 **Full-Stack Developer & Cloud Engineer** | 🎓 Cum Laude ICT Graduate  
-
-I design, build, and maintain **scalable applications** and **cloud infrastructure**.  
-My experience spans **backend systems, API integrations, data engineering pipelines, and AWS cloud deployments**.  
-
----
-
-## 🔹 About Me  
-
-- 🌍 Based in South Africa  
-- ☁️ Passionate about **cloud-native development, data engineering, and automation**  
-- 🚀 Experienced with **AWS, Node.js, Express, PostgreSQL, React**  
-- 📈 Always learning – currently pursuing **AWS Solutions Architect – Associate**  
-- 🤝 Open to opportunities in **software development, cloud engineering, and data platforms**  
+<p align="center">
+  <b>Full-Stack Developer & Cloud Engineer</b> 🚀 | <b>Cum Laude ICT Graduate</b> 🎓  
+</p>
 
 ---
 
-## 🔹 Skills  
+## 👨‍💻 About Me  
 
-### 💻 Programming & Development  
-- **Languages:** JavaScript (Node.js, ES6+), SQL  
-- **Web:** Express, React, REST APIs, OAuth 2.0  
-- **Architecture:** MVC, modular design  
+<p align="center">
+Passionate about <b>software development</b>, <b>cloud engineering</b>, and <b>data platforms</b>.  
+I build scalable apps, automate workflows, and engineer cloud-native pipelines.  
+</p>
 
-### ☁️ Cloud & Infrastructure  
-- **AWS Services:** Elastic Beanstalk, S3, Route 53, RDS, Certificate Manager, Lambda, Step Functions, Glue, DMS  
-- **Database:** PostgreSQL  
-- **Version Control:** Git, GitHub  
+- ☁️ AWS enthusiast – Elastic Beanstalk, Lambda, Glue, Step Functions, DMS  
+- 💻 Backend-first dev – Node.js, Express, PostgreSQL  
+- 📊 Data-driven – pipelines, APIs, visualizations  
+- 📈 Currently working on AWS Solutions Architect (Associate)  
 
 ---
 
-## 🔹 Projects  
+## 🛠️ Tech Stack  
 
-### 📦 Logistics Application (Lead Developer)  
-- Automated statement and invoice generation with **AWS Lambda + Event Scheduler**  
-- Designed MVC architecture and managed repo reviews in a multi-dev team  
+<p align="center">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" />
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+</p>
 
-### 💰 Fintech Data Platform  
-- Integrated **QuickBooks, Xero, Sage, Excel** into PostgreSQL  
-- Built REST APIs, OAuth 2.0 flows, and Chart.js visualizations  
+---
 
-### 📚 Research Management System  
-- Reporting & approval modules, PDF export (Puppeteer), MVC refactor  
+## 🚀 Highlight Projects  
 
-### ☁️ Cloud Data Pipeline  
-- Built serverless ETL pipeline:  
-  - Data ingestion (**Azure SQL → AWS S3**) via DMS  
-  - Crawling & transformation with Glue Crawlers/Jobs  
-  - Orchestration using Step Functions + Lambda  
+| 🌍 Project | 🔧 What I Did | 🛠️ Tech |
+|------------|---------------|---------|
+| **Logistics Application** | Repo management, MVC design, automated customer/subcontractor statements (Lambda), invoice automation | Node.js, Express, PostgreSQL, AWS Lambda |
+| **Fintech Platform** | Integrated QuickBooks/Xero/Sage/Excel → PostgreSQL, built REST APIs + OAuth 2.0, Chart.js visualizations | Node.js, Express, PostgreSQL, OAuth 2.0 |
+| **Research Management** | Reporting/approval workflows, PDF export (Puppeteer), MVC refactor | Node.js, Express, PostgreSQL, Puppeteer |
+| **Cloud Data Pipeline** | Azure SQL → S3 with DMS, Glue Crawlers + Jobs, Step Functions + Lambda orchestration | AWS S3, DMS, Glue, Lambda, Step Functions |
 
 ---
 
 ## 📊 GitHub Stats  
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Kiveshan&show_icons=true&theme=tokyonight" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Kiveshan&layout=compact&theme=tokyonight" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Kiveshan&show_icons=true&theme=tokyonight&hide_border=true" height="165" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Kiveshan&theme=tokyonight&hide_border=true" height="165" />
 </p>
 
 ---
 
-## 🏆 Certifications & Achievements  
+## 🏆 Certifications  
 
 - Microsoft AI Skills Challenge (Badge)  
 - Cisco: Intro to Cybersecurity, IoT, Data Science  
-- AWS Solutions Architect – Associate (In Progress)  
+- AWS Solutions Architect – Associate *(In Progress)*  
 
 ---
 
@@ -79,4 +75,6 @@ My experience spans **backend systems, API integrations, data engineering pipeli
 
 ---
 
-✨ Thanks for visiting my profile! Feel free to check out my pinned projects or connect with me.
+<p align="center">
+  <i>“Building scalable apps, automating workflows, and engineering the cloud.”</i>
+</p>
