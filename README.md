@@ -1,8 +1,8 @@
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:0d1117,100:161b22&height=110&section=header&text=Kiveshan+Naidoo&fontSize=34&fontColor=e6edf3&fontAlignY=52&desc=Backend+%26+Cloud+Engineer&descSize=15&descAlignY=72&descFontColor=8b949e" />
-
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Geist+Mono&weight=400&size=13&duration=4000&pause=99999&color=6E7681&center=true&vCenter=true&repeat=false&width=680&height=28&lines=AWS+%C2%B7+Node.js+%C2%B7+TypeScript+%C2%B7+PostgreSQL+%C2%B7+Terraform+%C2%B7+Docker" alt="Stack" />
+<h1>Kiveshan Naidoo</h1>
+
+![Stack](https://readme-typing-svg.demolab.com?font=Geist+Mono&weight=400&size=14&duration=4000&pause=99999&color=6E7681&center=true&vCenter=true&repeat=false&width=680&height=28&lines=Backend+%26+Cloud+Engineer+%E2%80%94+AWS+%C2%B7+Node.js+%C2%B7+TypeScript+%C2%B7+Terraform+%C2%B7+Docker)
 
 <br/>
 
@@ -10,7 +10,7 @@
 &nbsp;
 [![Email](https://img.shields.io/badge/Email-kiveshannaidoo9%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:kiveshannaidoo9@gmail.com)
 &nbsp;
-[![Remote](https://img.shields.io/badge/Open+to-Remote+globally-1a7f37?style=flat-square)](https://linkedin.com/in/kiveshannaidoo)
+[![Remote](https://img.shields.io/badge/Open%20to-Remote%20globally-1a7f37?style=flat-square)](https://linkedin.com/in/kiveshannaidoo)
 
 </div>
 
@@ -86,7 +86,7 @@ Backend and cloud engineer with 1.5 years of production experience. My ELT pipel
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=Kiveshan&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&rank_icon=github&card_width=480" alt="GitHub stats" />
+![GitHub stats](https://github-readme-stats.vercel.app/api?username=Kiveshan&show_icons=true&theme=github_dark&hide_border=true&count_private=true&rank_icon=github&card_width=480)
 
 </div>
 
@@ -110,6 +110,6 @@ I write infrastructure as code. I instrument production systems before I conside
 <div align="center">
 <br/>
 
-[![Connect on LinkedIn](https://img.shields.io/badge/Connect+on+LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/kiveshannaidoo)
+[![Connect on LinkedIn](https://img.shields.io/badge/Connect%20on%20LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/kiveshannaidoo)
 
 </div>
