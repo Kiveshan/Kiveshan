@@ -86,7 +86,7 @@ Backend and cloud engineer with 1.5 years of production experience. My ELT pipel
 
 <div align="center">
 
-![GitHub stats](https://github-readme-stats.vercel.app/api?username=Kiveshan&show_icons=true&theme=github_dark&hide_border=true&count_private=true&rank_icon=github&card_width=480)
+![GitHub Streak](https://streak-stats.demolab.com?user=Kiveshan&theme=github-dark-blue&hide_border=true&date_format=j%20M%5B%20Y%5D)
 
 </div>
 
