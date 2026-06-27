@@ -102,7 +102,7 @@ Backend and cloud engineer with 1.5 years of production experience. My ELT pipel
 
 ---
 
-I write infrastructure as code. I instrument production systems before I consider them done. I document architecture decisions, not just implementations. I don't hand off to a DevOps team — I am the DevOps function.
+I instrument production systems before I consider them done. I document architecture decisions, not just implementations. I don't hand off to a DevOps team — I am the DevOps function.
 
 *Open to remote backend and cloud engineering roles globally.*
 
