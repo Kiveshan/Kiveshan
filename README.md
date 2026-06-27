@@ -48,7 +48,7 @@ Backend and cloud engineer with 1.5 years of production experience. My ELT pipel
 
 ## Selected Work
 
-### [AWS Data Lakehouse & Analytics Platform](#)
+### [AWS Data Lakehouse & Analytics Platform](#https://github.com/Kiveshan/data-lakehouse-case-study)
 > End-to-end ELT pipeline for a government sector skills planning client — Azure SQL source → S3-backed raw, curated, and serving layers.
 
 `AWS Glue (PySpark)` &nbsp; `DMS` &nbsp; `Step Functions` &nbsp; `S3` &nbsp; `RDS` &nbsp; `Neo4j` &nbsp; `Node.js`
@@ -60,7 +60,7 @@ Backend and cloud engineer with 1.5 years of production experience. My ELT pipel
 
 <br/>
 
-### [Trucking Logistics Management System](#)
+### [Trucking Logistics Management System](#https://github.com/Kiveshan/logistics-platform-casestudy)
 > Replaced a fully paper-based client operation. Led a 5-person team from requirements through production.
 
 `Node.js` &nbsp; `PostgreSQL` &nbsp; `React` &nbsp; `Lambda` &nbsp; `EventBridge`
