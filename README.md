@@ -29,7 +29,7 @@ Backend and cloud engineer with 1.5 years of production experience. My ELT pipel
 
 <div align="center">
 
-[![Skills](https://skillicons.dev/icons?i=nodejs,ts,js,python,postgres,react,aws,terraform,docker,neo4j,prisma,githubactions&theme=dark&perline=6)](https://skillicons.dev)
+[![Skills](https://skillicons.dev/icons?i=nodejs,ts,js,python,postgres,react,aws,neo4j,prisma,githubactions&theme=dark&perline=6)](https://skillicons.dev)
 
 </div>
 
