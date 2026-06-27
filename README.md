@@ -2,7 +2,7 @@
 
 <h1>Kiveshan Naidoo</h1>
 
-![Stack](https://readme-typing-svg.demolab.com?font=Geist+Mono&weight=400&size=14&duration=4000&pause=99999&color=6E7681&center=true&vCenter=true&repeat=false&width=680&height=28&lines=Backend+%26+Cloud+Engineer+%E2%80%94+AWS+%C2%B7+Node.js+%C2%B7+TypeScript+%C2%B7+Terraform+%C2%B7+Docker)
+![Stack](https://readme-typing-svg.demolab.com?font=Geist+Mono&weight=400&size=14&duration=4000&pause=99999&color=6E7681&center=true&vCenter=true&repeat=false&width=680&height=28&lines=Backend+%26+Cloud+Engineer+%E2%80%94+AWS+%C2%B7+Node.js+%C2%B7+TypeScript+%C2%B7)
 
 <br/>
 
@@ -96,7 +96,6 @@ Backend and cloud engineer with 1.5 years of production experience. My ELT pipel
 
 | | |
 |:---|:---|
-| 🏆 **AWS Certified Solutions Architect – Associate** | In progress · 2026 |
 | 🎓 **BCT Information & Communications Technology — Cum Laude** | Durban University of Technology · 2020–2023 |
 
 <br/>
