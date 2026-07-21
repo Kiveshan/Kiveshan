@@ -60,7 +60,7 @@ Backend and cloud engineer with 1.5 years of production experience. My ELT pipel
 
 <br/>
 
-### [Trucking Logistics Management System](https://github.com/Kiveshan/logistics-platform-casestudy)
+### [Trucking Logistics Management System](https://github.com/Kiveshan/Whizz-Away)
 > Replaced a fully paper-based client operation. Led a 5-person team from requirements through production.
 
 `Node.js` &nbsp; `PostgreSQL` &nbsp; `React` &nbsp; `Lambda` &nbsp; `EventBridge`
