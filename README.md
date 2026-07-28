@@ -26,7 +26,8 @@ My ELT pipeline has run unattended in production since August 2025, processing *
 
 - **WhizzFleet** — a greenfield multi-tenant fleet management platform for trucking and logistics clients. TypeScript monorepo, Express, Prisma, PostgreSQL. Multi-tenancy designed in from the first commit rather than retrofitted.
 - **Neo4j knowledge graph layer** over the government-sector data lakehouse, modelling sector skills relationships for multi-hop traversal queries that relational multi-joins handle badly.
-- **Public architecture case studies** for three client-confidential systems — write-ups of the design decisions and trade-offs, no client-identifying detail.
+
+**Architecture case studies** — write-ups of the design decisions and trade-offs behind three client-confidential production systems, with no client-identifying detail: [data lakehouse](https://github.com/Kiveshan/data-lakehouse-case-study) &nbsp;·&nbsp; [logistics platform](https://github.com/Kiveshan/logistics-platform-casestudy) &nbsp;·&nbsp; [pharmacy delivery](https://github.com/Kiveshan/pharmacy-delivery-casestudy)
 
 <br/>
 
@@ -50,68 +51,57 @@ My ELT pipeline has run unattended in production since August 2025, processing *
 
 <br/>
 
-<details>
-<summary><strong>AWS services I've run in production</strong></summary>
+**AWS services I've run in production**
 
-<br/>
+`Lambda` &nbsp; `Step Functions` &nbsp; `Glue (PySpark)` &nbsp; `DMS` &nbsp; `S3` &nbsp; `RDS` &nbsp; `EventBridge` &nbsp; `Elastic Beanstalk` &nbsp; `CloudWatch` &nbsp; `IAM` &nbsp; `Location Service` &nbsp; `Cost Explorer`
 
-`Lambda` &nbsp; `Step Functions` &nbsp; `Glue (PySpark)` &nbsp; `DMS` &nbsp; `S3` &nbsp; `RDS` &nbsp; `EventBridge` &nbsp; `Elastic Beanstalk` &nbsp; `CloudWatch` &nbsp; `IAM` &nbsp; `Location Services` &nbsp; `Cost Explorer`
+**Beyond AWS**
 
-</details>
-
-<details>
-<summary><strong>Beyond AWS</strong></summary>
-
-<br/>
-
-**Backend** — Node.js, Express, TypeScript, REST API design, OAuth 2.0, JWT auth
-**Data** — PostgreSQL, Prisma, Neo4j, PySpark, Kimball dimensional modelling, SCD Type 2
-**Delivery** — GitHub Actions CI/CD, least-privilege IAM, multi-environment release management
-**Frontend** — React, Vite, Chart.js
-
-</details>
+- **Backend** — Node.js, Express, TypeScript, REST API design, OAuth 2.0, JWT auth
+- **Data** — PostgreSQL, Prisma, Neo4j, PySpark, Kimball dimensional modelling, SCD Type 2
+- **Delivery** — GitHub Actions CI/CD, least-privilege IAM, multi-environment release management
+- **Frontend** — React, Vite, Chart.js
 
 <br/>
 
 ## Selected Work
 
 ### [AWS Data Lakehouse &amp; Analytics Platform](https://github.com/Kiveshan/data-lakehouse-case-study)
-<!-- Add case study link here once the repo is public -->
 
 > End-to-end ELT pipeline for a government-sector skills planning client. Azure SQL source → S3-backed raw, curated, and serving layers.
 
-`AWS Glue (PySpark)` &nbsp; `DMS` &nbsp; `Step Functions` &nbsp; `S3` &nbsp; `RDS` &nbsp; `Neo4j` &nbsp; `Node.js`
+`AWS Glue (PySpark)` &nbsp; `DMS` &nbsp; `Step Functions` &nbsp; `Apache Iceberg` &nbsp; `S3` &nbsp; `RDS` &nbsp; `Neo4j`
 
 - ~750,000 records ingested per nightly run, unattended in production since August 2025
-- 400 entities modelled in a Kimball-compliant dimensional schema with SCD Type 2, enabling point-in-time historical analysis across the full dataset
+- 400 entities modelled in a Kimball-compliant dimensional schema with SCD Type 2 on Apache Iceberg, enabling point-in-time historical analysis across the full dataset
 - PySpark transforms in Glue applying schema normalisation, data-quality validation, and deduplication before promotion from raw to curated
-- Step Functions orchestration with conditional branching and retry logic — automatic failure recovery across DMS, Glue, and downstream jobs with no manual intervention
+- Two-level Step Functions design separating ingestion from transformation, with exponential backoff, retry limits, and SNS failure alerting — so a broken run surfaces rather than silently serving stale data
 
 <br/>
 
 ### [Trucking Logistics Management System](https://github.com/Kiveshan/logistics-platform-casestudy)
-<!-- Add case study link here once the repo is public -->
 
 > Replaced a client's entirely paper-based operation. Led a 5-person team from requirements through to production.
 
 `Node.js` &nbsp; `PostgreSQL` &nbsp; `React` &nbsp; `Lambda` &nbsp; `EventBridge`
 
 - Re-architected from single-tenant to multi-tenant SaaS — row-level data isolation via `company_id` across all tenant-scoped tables, middleware-enforced tenant context on every authenticated request, and a redesigned auth layer. **Live with 4 paying clients.**
-- Lambda triggered by EventBridge automating month-end statement generation, eliminating a 2-day manual finance process
-- Receivables aging report bucketing balances by overdue period, plus subcontractor commission reporting showing net margin per job
+- Statement aging recomputed live against outstanding items rather than carried forward from last month's closing balance, so every statement is a true point-in-time snapshot instead of an accumulated ledger
+- Driver rates versioned with effective-date ranges, so historical invoices stay reproducible at whatever rate was in force when the leg actually ran
+- Month-end statement generation triggered by EventBridge and Lambda rather than in-process cron, eliminating a 2-day manual finance process and decoupling the run from application uptime
 
 <br/>
 
 ### [Pharmacy &amp; Delivery Management System](https://github.com/Kiveshan/pharmacy-delivery-casestudy)
-<!-- Add case study link here once the repo is public -->
 
-> Prescription management, delivery route optimisation, and live driver tracking for a pharmacy operation.
+> Driver-facing delivery module of a production pharmacy dispensing platform — route sequencing, live tracking against a metered provider, and proof of delivery over an unreliable network.
 
-`Node.js` &nbsp; `PostgreSQL` &nbsp; `Prisma` &nbsp; `AWS S3` &nbsp; `AWS Location Services`
+`Node.js` &nbsp; `PostgreSQL` &nbsp; `Prisma` &nbsp; `AWS Location Service` &nbsp; `React`
 
-- Nearest-neighbour route heuristic (O(n²)) sequencing 20–50 daily delivery stops per driver, with a fixed-window override for time-constrained deliveries
-- Chose 3-second polling over WebSockets for live driver tracking — materially simpler to operate at that update frequency — writing coordinates to PostgreSQL and rendering position on an AWS Location Services map
-- Multi-layer prescription validation: dosage rules, controlled-substance checks, and patient record integrity, with S3-backed document archiving for regulatory compliance
+- Closed a read-check-write race reachable through the offline queue by moving the condition into the update itself and letting the affected-row count decide the winner
+- Ordered driver breadcrumbs by a server-assigned sequence rather than device timestamps, after unreliable device clocks produced traced paths that doubled back on themselves
+- Cut metered geolocation spend with an address-hash geocode cache, per-leg routing in place of a distance matrix, and a write cadence that adapts to movement state — roughly 1,200 requests per driver-hour collapsed to one per flush window
+- Durable client-side outbox (IndexedDB) so deliveries completed without signal replay in order, treating a 4xx as an answer to report and a network error as a condition to wait out
 
 <br/>
 
@@ -121,8 +111,9 @@ My ELT pipeline has run unattended in production since August 2025, processing *
 
 `Node.js` &nbsp; `PostgreSQL` &nbsp; `Prisma` &nbsp; `OAuth 2.0` &nbsp; `Chart.js`
 
-- Integrated Xero, QuickBooks, and Sage via REST, normalising three incompatible financial data models into a single reporting schema
-- OAuth 2.0 flows for all three providers — token refresh cycles, secure token storage, per-provider scope configuration
+- Integrated Xero, QuickBooks, and Sage via REST, normalising three incompatible P&amp;L report shapes into a single `{category, amount, date}` schema plus a common monthly calculation
+- Three credential models handled on their own terms rather than forced into one abstraction — OAuth 2.0 with DB-persisted tokens and explicit refresh for QuickBooks, SDK-delegated OAuth for Xero, and AES-encrypted per-session credentials for Sage, whose reseller API offers only HTTP Basic auth
+- Diff-based incremental extraction — three years back on first connect, one year on refresh, writing only where the incoming amount differs, so a re-run is close to a no-op
 - Excel P&amp;L import pipeline as a fallback for clients without a supported accounting integration
 
 <br/>
@@ -137,7 +128,7 @@ My ELT pipeline has run unattended in production since August 2025, processing *
 
 ---
 
-I instrument production systems before I consider them done. I document architecture decisions, not just implementations. I don't hand off to a DevOps team — I am the DevOps function.
+I document architecture decisions, not just implementations — including the ones I got wrong. Every case study above has a section on what I'd do differently. I don't hand off to a DevOps team; I am the DevOps function.
 
 <div align="center">
 <br/>
