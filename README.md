@@ -75,7 +75,7 @@ My ELT pipeline has run unattended in production since August 2025, processing *
 
 ## Selected Work
 
-### AWS Data Lakehouse &amp; Analytics Platform
+### [AWS Data Lakehouse &amp; Analytics Platform](https://github.com/Kiveshan/data-lakehouse-case-study)
 <!-- Add case study link here once the repo is public -->
 
 > End-to-end ELT pipeline for a government-sector skills planning client. Azure SQL source → S3-backed raw, curated, and serving layers.
@@ -89,7 +89,7 @@ My ELT pipeline has run unattended in production since August 2025, processing *
 
 <br/>
 
-### Trucking Logistics Management System
+### [Trucking Logistics Management System](https://github.com/Kiveshan/Whizz-Away)
 <!-- Add case study link here once the repo is public -->
 
 > Replaced a client's entirely paper-based operation. Led a 5-person team from requirements through to production.
@@ -102,7 +102,7 @@ My ELT pipeline has run unattended in production since August 2025, processing *
 
 <br/>
 
-### Pharmacy &amp; Delivery Management System
+### [Pharmacy &amp; Delivery Management System](https://github.com/Kiveshan/pharmacy-delivery-casestudy)
 <!-- Add case study link here once the repo is public -->
 
 > Prescription management, delivery route optimisation, and live driver tracking for a pharmacy operation.
@@ -115,8 +115,7 @@ My ELT pipeline has run unattended in production since August 2025, processing *
 
 <br/>
 
-### Multi-Platform Financial Analytics Dashboard
-<!-- Add repo link here once the secrets audit is complete -->
+### [Multi-Platform Financial Analytics Dashboard](https://github.com/Kiveshan/BizExecData)
 
 > Unified revenue, expense, and P&amp;L reporting across three structurally different accounting providers.
 
