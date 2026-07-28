@@ -89,7 +89,7 @@ My ELT pipeline has run unattended in production since August 2025, processing *
 
 <br/>
 
-### [Trucking Logistics Management System](https://github.com/Kiveshan/Whizz-Away)
+### [Trucking Logistics Management System](https://github.com/Kiveshan/logistics-platform-casestudy)
 <!-- Add case study link here once the repo is public -->
 
 > Replaced a client's entirely paper-based operation. Led a 5-person team from requirements through to production.
