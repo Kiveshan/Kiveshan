@@ -25,7 +25,7 @@ My ELT pipeline has run unattended in production since August 2025, processing *
 **Currently building:**
 
 - **WhizzFleet** — a greenfield multi-tenant fleet management platform for trucking and logistics clients. TypeScript monorepo, Express, Prisma, PostgreSQL. Multi-tenancy designed in from the first commit rather than retrofitted.
-- **Neo4j knowledge graph layer** over the government-sector data lakehouse, modelling sector skills relationships for multi-hop traversal queries that relational multi-joins handle badly.
+- **Neo4j knowledge graph layer** over the public-sector data lakehouse, modelling sector skills relationships for multi-hop traversal queries that relational multi-joins handle badly.
 
 **Architecture case studies** — write-ups of the design decisions and trade-offs behind three client-confidential production systems, with no client-identifying detail: [data lakehouse](https://github.com/Kiveshan/data-lakehouse-case-study) &nbsp;·&nbsp; [logistics platform](https://github.com/Kiveshan/logistics-platform-casestudy) &nbsp;·&nbsp; [pharmacy delivery](https://github.com/Kiveshan/pharmacy-delivery-casestudy)
 
@@ -58,7 +58,7 @@ My ELT pipeline has run unattended in production since August 2025, processing *
 **Beyond AWS**
 
 - **Backend** — Node.js, Express, TypeScript, REST API design, OAuth 2.0, JWT auth
-- **Data** — PostgreSQL, Prisma, Neo4j, PySpark, Kimball dimensional modelling, SCD Type 2
+- **Data** — PostgreSQL, Prisma, Neo4j, PySpark, Kimball dimensional modelling, SCD Type 2, Apache Iceberg
 - **Delivery** — GitHub Actions CI/CD, least-privilege IAM, multi-environment release management
 - **Frontend** — React, Vite, Chart.js
 
@@ -68,7 +68,7 @@ My ELT pipeline has run unattended in production since August 2025, processing *
 
 ### [AWS Data Lakehouse &amp; Analytics Platform](https://github.com/Kiveshan/data-lakehouse-case-study)
 
-> End-to-end ELT pipeline for a government-sector skills planning client. Azure SQL source → S3-backed raw, curated, and serving layers.
+> End-to-end ELT pipeline for a public-sector skills-data client. Azure MySQL source → S3-backed raw and curated layers, publishing through Apache Iceberg into an RDS PostgreSQL serving layer.
 
 `AWS Glue (PySpark)` &nbsp; `DMS` &nbsp; `Step Functions` &nbsp; `Apache Iceberg` &nbsp; `S3` &nbsp; `RDS` &nbsp; `Neo4j`
 
