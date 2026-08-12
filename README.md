@@ -2,7 +2,7 @@
 
 # Kiveshan Naidoo
 
-**Backend &amp; Cloud Engineer** &nbsp;·&nbsp; AWS &nbsp;·&nbsp; Node.js &nbsp;·&nbsp; TypeScript &nbsp;·&nbsp; PostgreSQL
+**Backend &amp; Cloud Engineer** &nbsp;·&nbsp; AWS &nbsp;·&nbsp; Node.js &nbsp;·&nbsp; TypeScript &nbsp;·&nbsp; PostgreSQL &nbsp;·&nbsp; Terraform
 
 <br/>
 
@@ -20,7 +20,7 @@
 
 Backend and cloud engineer with two years of production experience building systems for external paying clients across logistics, healthcare, finance, and the public sector.
 
-My ELT pipeline has run unattended in production since August 2025, processing **~750,000 records per nightly run**. I've delivered four production systems end-to-end — architecture, AWS infrastructure, CI/CD, and post-launch support — without a separate DevOps function. On the logistics platform I lead a team of five.
+My ELT pipeline has run unattended in production since August 2025, processing **~750,000 records per nightly run** — provisioned end-to-end as Terraform-managed infrastructure with remote state and native S3 locking. I've delivered four production systems end-to-end — architecture, AWS infrastructure, CI/CD, and post-launch support — without a separate DevOps function. On the logistics platform I lead a team of five.
 
 **Currently building:**
 
@@ -42,6 +42,7 @@ My ELT pipeline has run unattended in production since August 2025, processing *
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
 ![Neo4j](https://img.shields.io/badge/Neo4j-4581C3?style=for-the-badge&logo=neo4j&logoColor=white)
 ![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)
 ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
@@ -54,6 +55,10 @@ My ELT pipeline has run unattended in production since August 2025, processing *
 **AWS services I've run in production**
 
 `Lambda` &nbsp; `Step Functions` &nbsp; `Glue (PySpark)` &nbsp; `DMS` &nbsp; `S3` &nbsp; `RDS` &nbsp; `EventBridge` &nbsp; `Elastic Beanstalk` &nbsp; `CloudWatch` &nbsp; `IAM` &nbsp; `Location Service` &nbsp; `Cost Explorer`
+
+**Infrastructure as Code**
+
+`Terraform` — remote state via native S3 locking (Terraform ≥1.11), no DynamoDB lock table
 
 **Beyond AWS**
 
@@ -68,11 +73,12 @@ My ELT pipeline has run unattended in production since August 2025, processing *
 
 ### [AWS Data Lakehouse &amp; Analytics Platform](https://github.com/Kiveshan/data-lakehouse-case-study)
 
-> End-to-end ELT pipeline for a public-sector skills-data client. Azure MySQL source → S3-backed raw and curated layers, publishing through Apache Iceberg into an RDS PostgreSQL serving layer.
+> End-to-end ELT pipeline for a public-sector skills-data client, provisioned entirely as Terraform-managed infrastructure. Azure MySQL source → S3-backed raw and curated layers, publishing through Apache Iceberg into an RDS PostgreSQL serving layer.
 
-`AWS Glue (PySpark)` &nbsp; `DMS` &nbsp; `Step Functions` &nbsp; `Apache Iceberg` &nbsp; `S3` &nbsp; `RDS` &nbsp; `Neo4j`
+`AWS Glue (PySpark)` &nbsp; `DMS` &nbsp; `Step Functions` &nbsp; `Apache Iceberg` &nbsp; `S3` &nbsp; `RDS` &nbsp; `Terraform` &nbsp; `Neo4j`
 
 - ~750,000 records ingested per nightly run, unattended in production since August 2025
+- Entire pipeline provisioned in Terraform — DMS, S3, Glue, 9 Lambda functions, 2 Step Functions state machines, RDS Postgres — with remote state via native S3 locking, so the environment rebuilds from code, not console history
 - 400 entities modelled in a Kimball-compliant dimensional schema with SCD Type 2 on Apache Iceberg, enabling point-in-time historical analysis across the full dataset
 - PySpark transforms in Glue applying schema normalisation, data-quality validation, and deduplication before promotion from raw to curated
 - Two-level Step Functions design separating ingestion from transformation, with exponential backoff, retry limits, and SNS failure alerting — so a broken run surfaces rather than silently serving stale data
