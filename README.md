@@ -1,148 +1,106 @@
-<div align="center">
-
 # Kiveshan Naidoo
 
-**Backend &amp; Cloud Engineer** &nbsp;·&nbsp; AWS &nbsp;·&nbsp; Node.js &nbsp;·&nbsp; TypeScript &nbsp;·&nbsp; PostgreSQL &nbsp;·&nbsp; Terraform
-
-<br/>
+**Backend & Data Platform Engineer**  ·  AWS  ·  TypeScript/Node.js  ·  Python  ·  PostgreSQL  ·  Terraform
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-kiveshannaidoo-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/kiveshannaidoo)
-&nbsp;
-[![Email](https://img.shields.io/badge/Email-kiveshannaidoo9%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:kiveshannaidoo9@gmail.com)
-&nbsp;
+![Email](https://img.shields.io/badge/Email-kiveshannaidoo9%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)
 ![Location](https://img.shields.io/badge/Durban-South%20Africa-4B5563?style=flat-square)
-&nbsp;
-![Remote](https://img.shields.io/badge/Open%20to-Remote%20globally-1a7f37?style=flat-square)
 
-</div>
+Backend engineer who builds data platforms end to end on AWS, from ingestion and modelling to the Terraform-managed infrastructure underneath. I've delivered five production systems for external paying clients across government, logistics, healthcare and finance, and I lead a five-person team, with no separate DevOps function behind us.
 
-<br/>
+**Now:**
 
-Backend and cloud engineer with two years of production experience building systems for external paying clients across logistics, healthcare, finance, and the public sector.
+- **DHET data ingestion system** (live since August 2026, sole developer). National student and staff data for the Department of Higher Education and Training. Providers won't open their firewalls, so they run the extractor themselves and land their tables as Parquet in S3, using short-lived credentials from a FastAPI broker scoped to their own prefix. Table fingerprints before and after every read and atomic landing mean incomplete data is never published.
+- **WhizzFleet**, a multi-tenant fleet management platform for trucking clients, live with its first paying client. TypeScript, Express, Prisma, PostgreSQL on ECS Fargate, all in Terraform. Multi-tenancy designed in from the first commit.
 
-My ELT pipeline has run unattended in production since August 2025, processing **~750,000 records per nightly run** — provisioned end-to-end as Terraform-managed infrastructure with remote state and native S3 locking. I've delivered four production systems end-to-end — architecture, AWS infrastructure, CI/CD, and post-launch support — without a separate DevOps function. On the logistics platform I lead a team of five.
-
-**Currently building:**
-
-- **WhizzFleet** — a greenfield multi-tenant fleet management platform for trucking and logistics clients. TypeScript monorepo, Express, Prisma, PostgreSQL. Multi-tenancy designed in from the first commit rather than retrofitted.
-- **Neo4j knowledge graph layer** over the public-sector data lakehouse, modelling sector skills relationships for multi-hop traversal queries that relational multi-joins handle badly.
-
-**Architecture case studies** — write-ups of the design decisions and trade-offs behind three client-confidential production systems, with no client-identifying detail: [data lakehouse](https://github.com/Kiveshan/data-lakehouse-case-study) &nbsp;·&nbsp; [logistics platform](https://github.com/Kiveshan/logistics-platform-casestudy) &nbsp;·&nbsp; [pharmacy delivery](https://github.com/Kiveshan/pharmacy-delivery-casestudy)
-
-<br/>
+**Architecture case studies.** These are write-ups of the design decisions and trade-offs behind three production systems: [data lakehouse](https://github.com/Kiveshan/data-lakehouse-case-study)  ·  [logistics platform](https://github.com/Kiveshan/logistics-platform-casestudy)  ·  [pharmacy delivery](https://github.com/Kiveshan/pharmacy-delivery-casestudy)
 
 ## Stack
 
-<div align="center">
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=for-the-badge&logo=nodedotjs&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 
-![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white)
-![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
-![Neo4j](https://img.shields.io/badge/Neo4j-4581C3?style=for-the-badge&logo=neo4j&logoColor=white)
-![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
-
-</div>
-
-<br/>
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white) ![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white) ![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white) ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 
 **AWS services I've run in production**
 
-`Lambda` &nbsp; `Step Functions` &nbsp; `Glue (PySpark)` &nbsp; `DMS` &nbsp; `S3` &nbsp; `RDS` &nbsp; `EventBridge` &nbsp; `Elastic Beanstalk` &nbsp; `CloudWatch` &nbsp; `IAM` &nbsp; `Location Service` &nbsp; `Cost Explorer`
+`S3`   `STS`   `IAM`   `Lambda`   `Step Functions`   `Glue (PySpark)`   `DMS`   `RDS`   `ECS Fargate`   `ALB`   `EventBridge`   `CloudWatch`   `SNS`   `Secrets Manager`   `Route 53`   `Location Service`
 
 **Infrastructure as Code**
 
-`Terraform` — remote state via native S3 locking (Terraform ≥1.11), no DynamoDB lock table
+`Terraform`: remote state with native S3 locking (Terraform ≥1.11), no DynamoDB lock table
 
 **Beyond AWS**
 
-- **Backend** — Node.js, Express, TypeScript, REST API design, OAuth 2.0, JWT auth
-- **Data** — PostgreSQL, Prisma, Neo4j, PySpark, Kimball dimensional modelling, SCD Type 2, Apache Iceberg
-- **Delivery** — GitHub Actions CI/CD, least-privilege IAM, multi-environment release management
-- **Frontend** — React, Vite, Chart.js
-
-<br/>
+- **Backend:** TypeScript, Node.js, Express, Prisma, Python (FastAPI, Pydantic), REST API design, OAuth 2.0
+- **Data:** PostgreSQL, SQL Server, Parquet (PyArrow), PySpark, Apache Iceberg, Kimball dimensional modelling, SCD Type 2
+- **Testing:** pytest, testcontainers, mypy (strict), ruff
+- **Delivery:** GitHub Actions CI/CD with OIDC, least-privilege IAM, multi-environment release management
 
 ## Selected Work
 
-### [AWS Data Lakehouse &amp; Analytics Platform](https://github.com/Kiveshan/data-lakehouse-case-study)
+### DHET Data Ingestion System
 
-> End-to-end ELT pipeline for a public-sector skills-data client, provisioned entirely as Terraform-managed infrastructure. Azure MySQL source → S3-backed raw and curated layers, publishing through Apache Iceberg into an RDS PostgreSQL serving layer.
+> Ingestion layer for the Department of Higher Education and Training's national student and staff data. Live since August 2026, with a provider sending data every day. Sole developer. Code is not public.
 
-`AWS Glue (PySpark)` &nbsp; `DMS` &nbsp; `Step Functions` &nbsp; `Apache Iceberg` &nbsp; `S3` &nbsp; `RDS` &nbsp; `Terraform` &nbsp; `Neo4j`
+`Python`   `FastAPI`   `Pydantic`   `SQL Server`   `PyArrow/Parquet`   `Docker`   `S3`   `STS`   `pytest`   `testcontainers`
 
-- ~750,000 records ingested per nightly run, unattended in production since August 2025
-- Entire pipeline provisioned in Terraform — DMS, S3, Glue, 9 Lambda functions, 2 Step Functions state machines, RDS Postgres — with remote state via native S3 locking, so the environment rebuilds from code, not console history
-- 400 entities modelled in a Kimball-compliant dimensional schema with SCD Type 2 on Apache Iceberg, enabling point-in-time historical analysis across the full dataset
-- PySpark transforms in Glue applying schema normalisation, data-quality validation, and deduplication before promotion from raw to curated
-- Two-level Step Functions design separating ingestion from transformation, with exponential backoff, retry limits, and SNS failure alerting — so a broken run surfaces rather than silently serving stale data
+- **Extractor runs on the provider's side.** Providers wouldn't open their firewalls, so the extractor runs inside their network and pushes out.
+- **Credential broker.** No provider holds long-lived cloud keys. The broker issues short-lived STS credentials scoped to the provider's own S3 prefix, with rotation, revocation, rate limiting and a full audit trail.
+- **Completeness guarantee.** Providers delete source rows after each run, so the system must never publish incomplete data. It takes table fingerprints before and after every read (a sum of checksums, since XOR would cancel out duplicate rows) and lands each batch atomically behind a `_SUCCESS` marker.
+- **Testing against real dependencies.** Tests run against real SQL Server and storage containers rather than mocks, which caught a bug the mocks had missed.
+- **Failure handling.** Each failure has its own exit code, so a provider's scheduler can tell "retry later" from "call someone".
 
-<br/>
+### [AWS Data Lakehouse (MICT SETA)](https://github.com/Kiveshan/data-lakehouse-case-study)
+
+> End-to-end ELT pipeline for the MICT SETA, provisioned entirely as Terraform-managed infrastructure. It ran unattended every night from August 2025 to August 2026, when the client stopped funding it.
+
+`AWS Glue (PySpark)`   `DMS`   `Step Functions`   `Apache Iceberg`   `S3`   `RDS`   `Terraform`
+
+- **Volume:** about 750,000 records a night, from a cross-cloud Azure MySQL source through DMS, Glue and Iceberg into an RDS PostgreSQL serving layer.
+- **History and modelling:** full change history for 353 source tables with SCD Type 2. 47 of them were modelled into a Kimball star schema of 14 fact tables and 15 conformed dimensions.
+- **Orchestration:** two Step Functions state machines and 9 Lambdas replaced a manually run chain of jobs, with exponential backoff, retry limits and SNS failure alerts.
+- **Infrastructure:** all of it in Terraform, so the environment rebuilds from code rather than from console history.
 
 ### [Trucking Logistics Management System](https://github.com/Kiveshan/logistics-platform-casestudy)
 
-> Replaced a client's entirely paper-based operation. Led a 5-person team from requirements through to production.
+> Replaced a client's entirely paper-based operation. I led a 5-person team from requirements through to production.
 
-`Node.js` &nbsp; `PostgreSQL` &nbsp; `React` &nbsp; `Lambda` &nbsp; `EventBridge`
+`TypeScript`   `Node.js`   `PostgreSQL`   `React`   `Lambda`   `EventBridge`
 
-- Re-architected from single-tenant to multi-tenant SaaS — row-level data isolation via `company_id` across all tenant-scoped tables, middleware-enforced tenant context on every authenticated request, and a redesigned auth layer. **Live with 4 paying clients.**
-- Statement aging recomputed live against outstanding items rather than carried forward from last month's closing balance, so every statement is a true point-in-time snapshot instead of an accumulated ledger
-- Driver rates versioned with effective-date ranges, so historical invoices stay reproducible at whatever rate was in force when the leg actually ran
-- Month-end statement generation triggered by EventBridge and Lambda rather than in-process cron, eliminating a 2-day manual finance process and decoupling the run from application uptime
+- **Multi-tenancy.** Re-architected from single-tenant to multi-tenant SaaS: row-level isolation via `company_id`, middleware-enforced tenant context on every authenticated request, and a redesigned auth layer. **Live with 4 paying clients.**
+- **Statements.** Statement aging is recomputed live against outstanding items rather than carried forward, so every statement is a true point-in-time snapshot.
+- **Historical rates.** Driver rates are versioned with effective-date ranges, so historical invoices stay reproducible.
+- **Month-end automation.** EventBridge and Lambda generate statements at month end, replacing a 2-day manual finance process.
 
-<br/>
+### [Pharmacy & Delivery Management System](https://github.com/Kiveshan/pharmacy-delivery-casestudy)
 
-### [Pharmacy &amp; Delivery Management System](https://github.com/Kiveshan/pharmacy-delivery-casestudy)
+> The driver-facing delivery module of a production pharmacy dispensing platform.
 
-> Driver-facing delivery module of a production pharmacy dispensing platform — route sequencing, live tracking against a metered provider, and proof of delivery over an unreliable network.
+`Node.js`   `PostgreSQL`   `Prisma`   `AWS Location Service`   `React`
 
-`Node.js` &nbsp; `PostgreSQL` &nbsp; `Prisma` &nbsp; `AWS Location Service` &nbsp; `React`
-
-- Closed a read-check-write race reachable through the offline queue by moving the condition into the update itself and letting the affected-row count decide the winner
-- Ordered driver breadcrumbs by a server-assigned sequence rather than device timestamps, after unreliable device clocks produced traced paths that doubled back on themselves
-- Cut metered geolocation spend with an address-hash geocode cache, per-leg routing in place of a distance matrix, and a write cadence that adapts to movement state — roughly 1,200 requests per driver-hour collapsed to one per flush window
-- Durable client-side outbox (IndexedDB) so deliveries completed without signal replay in order, treating a 4xx as an answer to report and a network error as a condition to wait out
-
-<br/>
+- **Race condition.** Closed a read-check-write race reachable through the offline queue by moving the condition into the update itself. The affected-row count decides the winner, proved with 10 concurrent requests against one row.
+- **Ordering.** Driver breadcrumbs are ordered by a server-assigned sequence rather than device timestamps.
+- **Cost.** Metered geolocation spend was cut with a geocode cache, per-leg routing and a movement-aware write cadence.
+- **Offline support.** A durable IndexedDB outbox lets deliveries completed without signal replay in order.
 
 ### [Multi-Platform Financial Analytics Dashboard](https://github.com/Kiveshan/BizExecData)
 
-> Unified revenue, expense, and P&amp;L reporting across three structurally different accounting providers.
+> Unified P&L reporting across Xero, QuickBooks and Sage.
 
-`Node.js` &nbsp; `PostgreSQL` &nbsp; `Prisma` &nbsp; `OAuth 2.0` &nbsp; `Chart.js`
+`Node.js`   `PostgreSQL`   `Prisma`   `OAuth 2.0`
 
-- Integrated Xero, QuickBooks, and Sage via REST, normalising three incompatible P&amp;L report shapes into a single `{category, amount, date}` schema plus a common monthly calculation
-- Three credential models handled on their own terms rather than forced into one abstraction — OAuth 2.0 with DB-persisted tokens and explicit refresh for QuickBooks, SDK-delegated OAuth for Xero, and AES-encrypted per-session credentials for Sage, whose reseller API offers only HTTP Basic auth
-- Diff-based incremental extraction — three years back on first connect, one year on refresh, writing only where the incoming amount differs, so a re-run is close to a no-op
-- Excel P&amp;L import pipeline as a fallback for clients without a supported accounting integration
-
-<br/>
+- **Normalisation.** Three incompatible P&L report shapes are normalised into a single schema.
+- **Credentials.** Three credential models are handled on their own terms: OAuth 2.0 with refresh for QuickBooks, SDK-delegated OAuth for Xero, and encrypted per-session credentials for Sage.
+- **Incremental sync.** Diff-based incremental extraction makes a re-run close to a no-op.
 
 ## Credentials
 
 | | |
-|:---|:---|
-| **Bachelor of Information &amp; Communications Technology** — Cum Laude | Durban University of Technology · 2020–2023 |
-
-<br/>
+|:--|:--|
+| **Bachelor of Information & Communications Technology**, Cum Laude | Durban University of Technology · 2020–2023 |
 
 ---
 
-I document architecture decisions, not just implementations — including the ones I got wrong. Every case study above has a section on what I'd do differently. I don't hand off to a DevOps team; I am the DevOps function.
+I document architecture decisions, not just implementations, including the ones I got wrong.
 
-<div align="center">
-<br/>
-
-*Open to remote backend and cloud engineering roles globally.*
-
-<br/>
-
-[![Connect on LinkedIn](https://img.shields.io/badge/Connect%20on%20LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/kiveshannaidoo)
-
-</div>
+*Open to backend, platform, cloud and data engineering roles in Durban, Cape Town, Johannesburg or remote from South Africa.*
